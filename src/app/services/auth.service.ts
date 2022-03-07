@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from '../model/user';
 
-let API_URL = "http://192.168.12.206/api/user/";
+let API_URL = "http://192.168.1.4:8080/api/user/";
 
 @Injectable({
   providedIn: 'root'
@@ -41,4 +41,14 @@ export class AuthService {
     return this.http.post(API_URL + 'registration', JSON.stringify(user),
   {headers: {"Content-Type":"application/json; charset=UTF-8"}});
   }
+
+  findAllUsers(): Observable<any> {
+   return this.http.get(API_URL + "all",
+ {headers: {"Content-Type":"application/json; charset=UTF-8"}});
+ }
+
+ qrLogin(user:User, token:string): Observable<any> {
+   return this.http.post(API_URL + 'qrlogin/' + token, JSON.stringify(user),
+ {headers: {"Content-Type":"application/json; charset=UTF-8"}});
+ }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { MenuController,LoadingController } from '@ionic/angular';
-import {User} from '../model/user';
+import { User } from '../model/user';
 
 @Component({
   selector: 'app-login',
@@ -26,15 +26,11 @@ export class LoginPage implements OnInit {
   login(){
     this.presentLoading();
     this.authService.login(this.user).subscribe(data => {
-      if(data){
       this.dismiss();
       this.router.navigate(['/home']);
-    }
     },err =>{
-      if(err){
       this.errorMessage ="Username or password is incorrect";
-      this.dismiss();
-    }
+      this.dismiss();    
     });
   }
 

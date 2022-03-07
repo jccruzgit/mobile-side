@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'result',
     loadChildren: () => import('./result/result.module').then( m => m.ResultPageModule)
+  },
+  {
+    path: 'result/:id',
+    loadChildren: () => import('./result/result.module').then( m => m.ResultPageModule)
   }
 ];
 

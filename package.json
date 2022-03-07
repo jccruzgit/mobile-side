@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "@capacitor-community/barcode-scanner": "^2.1.0",
+    "@capacitor/android": "^3.4.3",
     "@capacitor/app": "1.1.1",
     "@capacitor/core": "3.4.3",
     "@capacitor/haptics": "1.1.4",
@@ -30,7 +32,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.0.1",
+    "@angular-devkit/build-angular": "^13.2.5",
     "@angular-eslint/builder": "~13.0.1",
     "@angular-eslint/eslint-plugin": "~13.0.1",
     "@angular-eslint/eslint-plugin-template": "~13.0.1",
@@ -40,7 +42,7 @@
     "@angular/compiler-cli": "~13.0.0",
     "@angular/language-service": "~13.0.0",
     "@capacitor/cli": "3.4.3",
-    "@ionic/angular-toolkit": "^5.0.0",
+    "@ionic/angular-toolkit": "^6.0.0",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
